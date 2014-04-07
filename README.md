@@ -16,7 +16,7 @@ To be able to add your own controllers
 
 1. Cd into the git directory 
 2. start the script with `sh gamepad-connect.sh start`
-3. Choose the correct device number ( [Don't know?](#faq1) )
+3. Choose the correct device number ( [Don't know which one it is?](#faq1) )
 4. Select your gamepad model
 
 The program has to be running while you want the controller to be in use
