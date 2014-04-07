@@ -7,10 +7,14 @@ A simplified hook to xboxdrv. Great for making any game controller work with sou
 ### Dependencies
 
 To be able to run this program
-- xboxdrv
+- evdev (standard package on most distros)
+- [xboxdrv](https://github.com/Grumbel/xboxdrv)
 
 To be able to add your own controllers
 - evtest
+
+To install both on ubuntu:
+sudo apt-get install xboxdrv evtest
 
 ### Usage
 
@@ -36,6 +40,14 @@ For example, if the debug returns 279 when you press and release the A button, c
 
 ## FAQ
 
-##### <a name="faq1"></a>Which /dev/input/event is my controller?
+#### <a name="faq1"></a>Which /dev/input/event is my controller?
 
 If you do not know which one it is, plug out your controller and type `ls /dev/input/event*`, plug it back in, type the command again. The eventX that is apparent on the second time you wrote the command but not the first, is your controller.
+
+#### My controller isn't showing up in /dev/input/event
+
+I'm sorry but i cannot help you here since these are driver issues.
+Something that i would recommend is to get a distro with a newer kernel and evdev versions.
+The script runs great on my laptop with Arch, but does not work with my desktop running Ubuntu 12.04. I do not know if newer ubuntu versions works with it, but it's highly possible.
+
+Start with seeing if lsusb detects it, if it doesn't you can probably blame your kernel.
